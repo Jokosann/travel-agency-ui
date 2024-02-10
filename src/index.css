@@ -1,10 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Volkhov:wght@400;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-body {
-	font-family: 'Inter', sans-serif;
-}
 
 @layer components {
 	.wrapper {
@@ -13,4 +11,36 @@ body {
 		padding-inline: 2rem;
 		margin-inline: auto;
 	}
+}
+
+header.active {
+	@apply bg-light shadow-sm;
+}
+
+.navlist__menu {
+	transition: 0.3s;
+}
+.navlist__menu.open {
+	transform: translateX(0);
+}
+
+.navlist.active {
+	color: #f1a501;
+}
+.navlist.active::after {
+	transform: scale(1);
+}
+.navlist::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background-color: #f1a501;
+	transform: scale(0);
+	transition: 0.3s;
+}
+.navlist:hover::after {
+	transform: scale(1);
 }
