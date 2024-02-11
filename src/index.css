@@ -5,42 +5,63 @@
 @tailwind utilities;
 
 @layer components {
-	.wrapper {
-		max-width: 1280px;
-		width: 100%;
-		padding-inline: 2rem;
-		margin-inline: auto;
-	}
+    .wrapper {
+        max-width: 1280px;
+        width: 100%;
+        padding-inline: 1rem;
+        margin-inline: auto;
+    }
+    .card__category {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 2rem;
+    }
 }
 
 header.active {
-	@apply bg-light shadow-sm;
+    @apply bg-light shadow-sm;
 }
 
 .navlist__menu {
-	transition: 0.3s;
+    transition: 0.3s;
 }
 .navlist__menu.open {
-	transform: translateX(0);
+    transform: translateX(0);
 }
 
 .navlist.active {
-	color: #f1a501;
+    color: #f1a501;
 }
 .navlist.active::after {
-	transform: scale(1);
+    transform: scale(1);
 }
 .navlist::after {
-	content: '';
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 2px;
-	background-color: #f1a501;
-	transform: scale(0);
-	transition: 0.3s;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #f1a501;
+    transform: scale(0);
+    transition: 0.3s;
 }
 .navlist:hover::after {
-	transform: scale(1);
+    transform: scale(1);
+}
+
+.layer__opacity {
+    position: absolute;
+    inset: 0;
+    z-index: 40;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    background-color: #000;
+    transition: 20ms;
+}
+.layer__opacity.apper {
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.6;
 }
