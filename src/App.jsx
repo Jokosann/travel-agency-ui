@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from './components/Navbar';
-
 import Decore from './assets/svg/Decore.svg';
 import HeroContent from './components/HeroContent';
 import Category from './components/Category';
+import Destinations from './components/Destinations';
 
 function App() {
     const [scrollPosition, setScrollPosition] = useState(0);
@@ -33,27 +33,29 @@ function App() {
                     className="w-96 xs:w-[500px] sm:w-[600px] md:w-[500px] lg:w-[600px] xl:w-auto"
                 />
             </div>
-            <section className="wrapper pt-20 mb-10" id="home">
+            <section className="wrapper pt-20" id="home">
                 <HeroContent />
             </section>
-            <section className="wrapper pt-20 mb-10" id="category">
+            <section className="wrapper pt-20" id="category" data-id="1">
                 <Category />
             </section>
+            <section className="wrapper pt-20 mb-32" id="desitnations" data-id="2">
+                <Destinations />
+            </section>
             <section
-                className="wrapper min-h-screen pt-20 mb-10 bg-slate-500"
-                id="desitnations"
-            ></section>
-            <section
-                className="wrapper min-h-screen pt-20 mb-10 bg-violet-500"
+                className="wrapper min-h-screen pt-20 bg-violet-500"
                 id="bookings"
+                data-id="3"
             ></section>
             <section
-                className="wrapper min-h-screen pt-20 mb-10 bg-indigo-500"
+                className="wrapper min-h-screen pt-20 bg-indigo-500"
                 id="testimonials"
+                data-id="4"
             ></section>
             <section
-                className="wrapper min-h-screen pt-20 mb-10 bg-teal-500"
+                className="wrapper min-h-screen pt-20 bg-teal-500"
                 id="contact"
+                data-id="5"
             ></section>
         </React.Fragment>
     );

@@ -12,7 +12,21 @@ const Navbar = () => {
     const [isActive, setIsActive] = useState(null);
 
     const handleScroll = () => {
+        const sections = document.querySelectorAll('section');
+        const navlink = document.querySelectorAll('nav a');
         const { scrollY } = window;
+        sections.forEach((section) => {
+            const { offsetTop, clientHeight } = section;
+            const offset = offsetTop - 100;
+
+            if (scrollY >= offset && scrollY < offset + clientHeight) {
+                navlink.forEach((link) => {
+                    if (link.dataset.scroll === section.dataset.id) {
+                        setIsActive(Number(link.dataset.scroll));
+                    }
+                });
+            }
+        });
         if (scrollY > 0) {
             setIsNavbar(true);
             setIsLayer(false);
@@ -34,7 +48,7 @@ const Navbar = () => {
         <header
             className={`${
                 isNavbar ? 'active' : ''
-            } w-full h-16 fixed z-50 top-0 left-0 flex items-center`}
+            } w-full pt-4 fixed z-50 top-0 left-0 flex items-center`}
         >
             <nav className="wrapper flex items-center justify-between gap-6">
                 <img
@@ -69,7 +83,6 @@ const Navbar = () => {
                                 key={item.id}
                                 onClick={(e) => {
                                     e.preventDefault();
-                                    setIsActive(item.id);
                                     setIsMenu(false);
                                     setIsLayer(false);
                                     const targetElement = document.querySelector(item.href);
@@ -82,6 +95,7 @@ const Navbar = () => {
                                 isActive={isActive}
                                 id={item.id}
                                 href={item.href}
+                                scroll={item.scroll}
                             >
                                 {item.name}
                             </Navlist>
@@ -100,6 +114,10 @@ const Navbar = () => {
                         >
                             Sign up
                         </button>
+                        <select className="bg-transparent cursor-pointer">
+                            <option value="">EN</option>
+                            <option value="">ID</option>
+                        </select>
                     </div>
                 </div>
                 <div

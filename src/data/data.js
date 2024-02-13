@@ -1,11 +1,12 @@
 import { svg } from '../utils/assets';
+import { img } from '../utils/assets';
 
 export const dataNavlist = [
-    { id: 1, name: 'category', href: '#category' },
-    { id: 2, name: 'desitnations', href: '#desitnations' },
-    { id: 3, name: 'bookings', href: '#bookings' },
-    { id: 4, name: 'testimonials', href: '#testimonials' },
-    { id: 5, name: 'contact', href: '#contact' },
+    { id: 1, name: 'category', href: '#category', scroll: '1' },
+    { id: 2, name: 'desitnations', href: '#desitnations', scroll: '2' },
+    { id: 3, name: 'bookings', href: '#bookings', scroll: '3' },
+    { id: 4, name: 'testimonials', href: '#testimonials', scroll: '4' },
+    { id: 5, name: 'contact', href: '#contact', scroll: '5' },
 ];
 
 export const dataCategory = [
@@ -29,4 +30,10 @@ export const dataCategory = [
         title: 'custumizations',
         fill: 'We deliver outsourced aviation services for military customers',
     },
+];
+
+export const dataDestinations = [
+    { id: 1, img: img.Italy, place: 'Rome, Italy', price: '$5,42k', trip: '10 Days Trip' },
+    { id: 2, img: img.London, place: 'London, UK', price: '$4,2k', trip: '12 Days Trip' },
+    { id: 3, img: img.Europe, place: 'Full Europe', price: '$15k', trip: '28 Days Trip' },
 ];

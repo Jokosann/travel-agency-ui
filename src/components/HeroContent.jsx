@@ -23,7 +23,8 @@ const HeroContent = () => {
                     Best Destinations around the world
                 </p>
                 <h1 className="text-4xl xs:text-5xl xs:leading-[58px] sm:text-[55px] sm:leading-[65px] md:text-[2.5rem] md:leading-[2.8rem] lg:text-5xl xl:text-6xl font-bold font-volkhov mb-4 md:mb-2 lg:mb-4 text-blue-dark">
-                    Travel, enjoy and live a new and full life
+                    Travel, <span className="decore__enjoy">enjoy</span> and live a new and
+                    full life
                 </h1>
                 <p className="font-poppins text-sm text-black-light mb-4 md:mb-2 lg:mb-4 lg:pr-10">
                     Built Wicket longer admire do barton vanity itself do in it. Preferred to
