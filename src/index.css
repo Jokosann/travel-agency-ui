@@ -87,3 +87,7 @@ header.active {
 	height: 8px;
 	background-image: url(./assets/svg/DecoreEnjoy.svg);
 }
+
+.booking__card {
+	box-shadow: 100px -100px 100rem 2px rgba(89, 177, 230, 0.3);
+}

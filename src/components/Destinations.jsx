@@ -10,7 +10,7 @@ const Destinations = () => {
 				</p>
 				<h1 className="text-center font-volkhov text-3xl font-bold">Top Destinations</h1>
 			</div>
-			<div className="max-w-3xl w-full mx-auto card__destinations">
+			<div className="max-w-4xl w-full mx-auto card__destinations">
 				{dataDestinations.map((item) => (
 					<div
 						key={item.id}

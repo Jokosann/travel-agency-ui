@@ -11,14 +11,17 @@ import MapIcon from '../assets/svg/Map-icon.svg';
 import Send from '../assets/svg/Send.svg';
 import Going from '../assets/svg/Going.svg';
 import Love from '../assets/svg/Love.svg';
+import Plane from '../assets/svg/plane.svg';
 
 import Italy from '../assets/images/Italy.png';
 import London from '../assets/images/London.png';
 import Europe from '../assets/images/Europe.png';
 import Greece from '../assets/images/Greece.jpg';
 import Rome from '../assets/images/Rome.png';
+import Traveller from '../assets/images/Traveller.png';
 
 export const svg = {
+	Plane,
 	Custumizations,
 	Events,
 	Flights,
@@ -33,4 +36,4 @@ export const svg = {
 	Going,
 	Love,
 };
-export const img = { Italy, London, Europe, Greece, Rome };
+export const img = { Traveller, Italy, London, Europe, Greece, Rome };

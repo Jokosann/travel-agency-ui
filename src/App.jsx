@@ -34,16 +34,16 @@ function App() {
 					className="w-96 xs:w-[500px] sm:w-[600px] md:w-[500px] lg:w-[600px] xl:w-auto"
 				/>
 			</div>
-			<section className="wrapper pt-20" id="home">
+			<section className="wrapper pt-20 mb-8" id="home">
 				<HeroContent />
 			</section>
-			<section className="wrapper pt-20" id="category" data-id="1">
+			<section className="wrapper pt-20 mb-8" id="category" data-id="1">
 				<Category />
 			</section>
-			<section className="wrapper pt-20" id="desitnations" data-id="2">
+			<section className="wrapper pt-20 mb-8" id="desitnations" data-id="2">
 				<Destinations />
 			</section>
-			<section className="wrapper pt-20" id="bookings" data-id="3">
+			<section className="wrapper pt-20 mb-8" id="bookings" data-id="3">
 				<Booking />
 			</section>
 			<section
