@@ -5,6 +5,8 @@ import HeroContent from './components/HeroContent';
 import Category from './components/Category';
 import Destinations from './components/Destinations';
 import Booking from './components/Booking';
+import Testimonials from './components/Testimonials';
+import InfinitiScrollLogo from './components/InfinitiScrollLogo';
 
 function App() {
 	const [scrollPosition, setScrollPosition] = useState(0);
@@ -46,11 +48,10 @@ function App() {
 			<section className="wrapper pt-20 mb-8" id="bookings" data-id="3">
 				<Booking />
 			</section>
-			<section
-				className="wrapper min-h-screen pt-20 bg-indigo-500"
-				id="testimonials"
-				data-id="4"
-			></section>
+			<section className="wrapper pt-20 mb-8" id="testimonials" data-id="4">
+				<Testimonials />
+				<InfinitiScrollLogo />
+			</section>
 			<section
 				className="wrapper min-h-screen pt-20 bg-teal-500"
 				id="contact"

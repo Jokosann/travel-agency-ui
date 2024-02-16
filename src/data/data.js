@@ -55,3 +55,40 @@ export const dataBooking = [
 		value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus. ',
 	},
 ];
+
+export const testimoniesData = [
+	{
+		image: img.Profile01,
+		article:
+			'“On the Windows talking painted pasture yet its express parties use. Surelast upon he same as knew next. Of believed or diverted no.”',
+		name: 'John Deaa',
+		address: 'Pekanbaru, Indonesia',
+	},
+	{
+		image: img.Profile02,
+		article:
+			'“On the Windows talking painted pasture yet its express parties use. Surelast upon he same as knew next. Of believed or diverted no.”',
+		name: 'James Bond',
+		address: 'Jakarta, Indonesia',
+	},
+	{
+		image: img.Profile03,
+		article:
+			'“On the Windows talking painted pasture yet its express parties use. Surelast upon he same as knew next. Of believed or diverted no.”',
+		name: 'Prabowo Gibran',
+		address: 'Solo, Indonesia',
+	},
+];
+
+export const LogoData = [
+	img.Logo01,
+	img.Logo02,
+	img.Logo03,
+	img.Logo04,
+	img.Logo05,
+	img.Logo01,
+	img.Logo02,
+	img.Logo03,
+	img.Logo04,
+	img.Logo05,
+];

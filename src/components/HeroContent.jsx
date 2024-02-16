@@ -1,5 +1,3 @@
-// import Traveller from '../assets/images/Traveller.png';
-// import Plane from '../assets/svg/plane.svg';
 import { img } from '../utils/assets';
 import { svg } from '../utils/assets';
 import { IoMdPlay } from 'react-icons/io';

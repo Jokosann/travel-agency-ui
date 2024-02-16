@@ -5,15 +5,15 @@
 
 @layer components {
 	.wrapper {
-		max-width: 1280px;
+		max-width: 1168px;
 		width: 100%;
 		padding-inline: 1rem;
 		margin-inline: auto;
 	}
 	.card__category {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-		gap: 2rem;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2.5rem;
 	}
 	.card__destinations {
 		display: grid;
@@ -90,4 +90,59 @@ header.active {
 
 .booking__card {
 	box-shadow: 100px -100px 100rem 2px rgba(89, 177, 230, 0.3);
+}
+
+/* carousel */
+.embla {
+	overflow: hidden;
+	padding: 1rem;
+	position: relative;
+}
+.embla__container {
+	display: flex;
+	gap: 2rem;
+}
+.embla__slide {
+	flex: 0 0 100%;
+	min-width: 0;
+}
+.embla__prev {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translate(0, -50%);
+	width: 30px;
+	aspect-ratio: 1/1;
+	background-color: #fefefe;
+	box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.2);
+	display: grid;
+	place-content: center;
+	border-radius: 50%;
+}
+.embla__next {
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translate(0, -50%);
+	width: 30px;
+	aspect-ratio: 1/1;
+	background-color: #fefefe;
+	box-shadow: -1px 2px 1px rgba(0, 0, 0, 0.2);
+	display: grid;
+	place-content: center;
+	border-radius: 50%;
+}
+
+/* infinity scroll */
+.wrapper.slider {
+	mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
+}
+.infiniti__scroll {
+	animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+	to {
+		transform: translate(calc(-50% - 2.5rem));
+	}
 }
