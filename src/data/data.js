@@ -6,7 +6,6 @@ export const dataNavlist = [
 	{ id: 2, name: 'desitnations', href: '#desitnations', scroll: '2' },
 	{ id: 3, name: 'bookings', href: '#bookings', scroll: '3' },
 	{ id: 4, name: 'testimonials', href: '#testimonials', scroll: '4' },
-	{ id: 5, name: 'contact', href: '#contact', scroll: '5' },
 ];
 
 export const dataCategory = [

@@ -10,11 +10,13 @@
 		padding-inline: 1rem;
 		margin-inline: auto;
 	}
+
 	.card__category {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 		gap: 2.5rem;
 	}
+
 	.card__destinations {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -26,6 +28,7 @@
 header {
 	@apply transition-all;
 }
+
 header.active {
 	@apply bg-light shadow-sm py-5;
 }
@@ -33,6 +36,7 @@ header.active {
 .navlist__menu {
 	transition: 0.3s;
 }
+
 .navlist__menu.open {
 	transform: translateX(0);
 }
@@ -40,9 +44,11 @@ header.active {
 .navlist.active {
 	color: #f1a501;
 }
+
 .navlist.active::after {
 	transform: scale(1);
 }
+
 .navlist::after {
 	content: '';
 	position: absolute;
@@ -54,6 +60,7 @@ header.active {
 	transform: scale(0);
 	transition: 0.3s;
 }
+
 .navlist:hover::after {
 	transform: scale(1);
 }
@@ -68,6 +75,7 @@ header.active {
 	background-color: #000;
 	transition: 20ms;
 }
+
 .layer__opacity.apper {
 	width: 100vw;
 	height: 100vh;
@@ -77,6 +85,7 @@ header.active {
 .decore__enjoy {
 	position: relative;
 }
+
 .decore__enjoy::after {
 	content: '';
 	position: absolute;
@@ -98,14 +107,17 @@ header.active {
 	padding: 1rem;
 	position: relative;
 }
+
 .embla__container {
 	display: flex;
 	gap: 2rem;
 }
+
 .embla__slide {
 	flex: 0 0 100%;
 	min-width: 0;
 }
+
 .embla__prev {
 	position: absolute;
 	top: 50%;
@@ -119,6 +131,7 @@ header.active {
 	place-content: center;
 	border-radius: 50%;
 }
+
 .embla__next {
 	position: absolute;
 	top: 50%;
@@ -137,12 +150,18 @@ header.active {
 .wrapper.slider {
 	mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
 }
-.infiniti__scroll {
-	animation: scroll 10s linear infinite;
+
+.infiniti-scroll {
+	animation: scroll 20s linear infinite;
 }
 
 @keyframes scroll {
 	to {
 		transform: translate(calc(-50% - 2.5rem));
 	}
+}
+
+/* subscribe */
+.subscribe {
+	border-radius: 100px 24px 24px 24px;
 }

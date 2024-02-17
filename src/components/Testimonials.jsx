@@ -1,5 +1,3 @@
-// import { img } from '../utils/assets';
-
 import { EmblaCarousel } from './Carousel';
 
 const Testimonials = () => {

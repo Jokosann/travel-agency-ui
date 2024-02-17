@@ -10,6 +10,7 @@ export default {
 				yellow: '#F1A501',
 				light: '#fefefe',
 				'orange-pink': '#DF6951',
+				'bg-contact': '#f9f7fe',
 			},
 		},
 		fontFamily: {

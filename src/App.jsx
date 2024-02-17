@@ -7,9 +7,11 @@ import Destinations from './components/Destinations';
 import Booking from './components/Booking';
 import Testimonials from './components/Testimonials';
 import InfinitiScrollLogo from './components/InfinitiScrollLogo';
+import Subscribe from './components/Subscribe';
 
 function App() {
 	const [scrollPosition, setScrollPosition] = useState(0);
+
 	useEffect(() => {
 		const handleScroll = () => {
 			setScrollPosition(window.scrollY);
@@ -51,12 +53,8 @@ function App() {
 			<section className="wrapper pt-20 mb-8" id="testimonials" data-id="4">
 				<Testimonials />
 				<InfinitiScrollLogo />
+				<Subscribe />
 			</section>
-			<section
-				className="wrapper min-h-screen pt-20 bg-teal-500"
-				id="contact"
-				data-id="5"
-			></section>
 		</React.Fragment>
 	);
 }
