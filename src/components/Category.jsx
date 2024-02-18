@@ -1,16 +1,38 @@
 import { dataCategory } from '../data/data';
+import { motion } from 'framer-motion';
+import { fadeIn } from '../utils/variants';
 
 const Category = () => {
 	return (
 		<div className="flex flex-col">
 			<div className="w-full mb-14">
-				<p className="text-center font-poppins font-medium text-black-light mb-2">Category</p>
-				<h1 className="text-center font-volkhov text-4xl font-bold">We Offer Best Services</h1>
+				<motion.p
+					variants={fadeIn('up', 0.2, 1)}
+					initial="offscreen"
+					whileInView={'onscreen'}
+					viewport={{ once: true, amount: 0.7 }}
+					className="text-center font-poppins font-medium text-black-light mb-2"
+				>
+					Category
+				</motion.p>
+				<motion.h1
+					variants={fadeIn('up', 0.2, 1.5)}
+					initial="offscreen"
+					whileInView={'onscreen'}
+					viewport={{ once: true, amount: 0.7 }}
+					className="text-center font-volkhov text-4xl font-bold"
+				>
+					We Offer Best Services
+				</motion.h1>
 			</div>
 			<div className="w-full card__category">
 				{dataCategory.map((item, index) => (
-					<div
+					<motion.div
 						key={index}
+						variants={fadeIn('up', 0.2, index + 1)}
+						initial="offscreen"
+						whileInView={'onscreen'}
+						viewport={{ once: true, amount: 0.7 }}
 						className="flex flex-col items-center justify-between gap-4 px-8 py-12 bg-light rounded-2xl shadow-md"
 					>
 						<div className="flex justify-center items-center h-[154px]">
@@ -24,7 +46,7 @@ const Category = () => {
 								{item.fill}
 							</p>
 						</div>
-					</div>
+					</motion.div>
 				))}
 			</div>
 		</div>

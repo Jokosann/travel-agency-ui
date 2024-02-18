@@ -92,8 +92,8 @@ export const LogoData = [
 	img.Logo05,
 ];
 
-export const footerData = {
-	companyData: ['About', 'Careers', 'Mobile'],
-	ContactData: ['Help/FAQ', 'Prees', 'Affilates'],
-	moreData: ['Airlinefess', 'Airline', 'Low fare tips'],
-};
+export const footerData = [
+	{ name: 'Company', items: ['About', 'Careers', 'Mobile'] },
+	{ name: 'Contact', items: ['Help/FAQ', 'Prees', 'Affilates'] },
+	{ name: 'More', items: ['Airlinefess', 'Airline', 'Low fare tips'] },
+];

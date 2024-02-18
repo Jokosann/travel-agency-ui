@@ -1,16 +1,30 @@
 import { EmblaCarousel } from './Carousel';
+import { motion } from 'framer-motion';
+import { fadeIn } from '../utils/variants';
 
 const Testimonials = () => {
 	return (
-		<div className="flex flex-col gap-10 mb-16">
+		<div className="flex flex-col gap-10 mb-14">
 			<div className="w-full">
 				<div>
-					<p className="text-center font-poppins font-medium text-black-light mb-2">
+					<motion.p
+						variants={fadeIn('up', 0.2, 1)}
+						initial="offscreen"
+						whileInView={'onscreen'}
+						viewport={{ once: true, amount: 0.7 }}
+						className="text-center font-poppins font-medium text-black-light mb-2"
+					>
 						Testimonials
-					</p>
-					<h1 className="text-center font-volkhov text-4xl font-bold">
+					</motion.p>
+					<motion.h1
+						variants={fadeIn('up', 0.2, 1.5)}
+						initial="offscreen"
+						whileInView={'onscreen'}
+						viewport={{ once: true, amount: 0.7 }}
+						className="text-center font-volkhov text-4xl font-bold"
+					>
 						What people say about Us.
-					</h1>
+					</motion.h1>
 				</div>
 			</div>
 			<EmblaCarousel />

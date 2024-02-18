@@ -1,11 +1,19 @@
 import { dataBooking } from '../data/data';
 import { img } from '../utils/assets';
 import { svg } from '../utils/assets';
+import { motion } from 'framer-motion';
+import { fadeIn } from '../utils/variants';
 
 const Booking = () => {
 	return (
 		<div className="flex flex-col md:flex-row gap-8">
-			<div className="flex flex-col gap-2  w-full md:w-[1/2]">
+			<motion.div
+				variants={fadeIn('right', 0.2, 1)}
+				initial="offscreen"
+				whileInView={'onscreen'}
+				viewport={{ once: true, amount: 0.7 }}
+				className="flex flex-col gap-2  w-full md:w-[1/2]"
+			>
 				<div>
 					<p className="text-left font-poppins font-medium text-black-light mb-2">
 						Easy and Fast
@@ -25,8 +33,14 @@ const Booking = () => {
 						</div>
 					))}
 				</div>
-			</div>
-			<div className="relative w-full md:w-[1/2] h-[350px]">
+			</motion.div>
+			<motion.div
+				variants={fadeIn('left', 0.2, 1)}
+				initial="offscreen"
+				whileInView={'onscreen'}
+				viewport={{ once: true, amount: 0.7 }}
+				className="relative w-full md:w-[1/2] h-[350px]"
+			>
 				<div className="booking__card w-full max-w-[370px] h-fit absolute -z-[1] md:left-1/2 md:-translate-x-1/2 shadow-2xl  rounded-3xl p-6">
 					<img src={img.Greece} alt={img.Greece} />
 					<div className="flex flex-col gap-4 mt-5">
@@ -69,7 +83,7 @@ const Booking = () => {
 						</div>
 					</div>
 				</div>
-			</div>
+			</motion.div>
 		</div>
 	);
 };

@@ -1,11 +1,19 @@
 import { img } from '../utils/assets';
 import { svg } from '../utils/assets';
 import { IoMdPlay } from 'react-icons/io';
+import { motion } from 'framer-motion';
+import { fadeIn } from '../utils/variants';
 
 const HeroContent = () => {
 	return (
 		<div className="flex flex-col md:flex-row gap-4 sm:gap-0 md:gap-8">
-			<div className="relative w-full sm:grid sm:place-content-center md:w-1/2 aspect-[1/1.2] sm:aspect-square md:order-1 overflow-hidden">
+			<motion.div
+				variants={fadeIn('left', 0.2, 1)}
+				initial="offscreen"
+				whileInView={'onscreen'}
+				viewport={{ once: true, amount: 0.7 }}
+				className="relative w-full sm:grid sm:place-content-center md:w-1/2 aspect-[1/1.2] sm:aspect-square md:order-1 overflow-hidden"
+			>
 				<img src={svg.Plane} alt={svg.Plane} className="absolute -z-10 w-36 md:40 lg:w-44" />
 				<img
 					src={svg.Plane}
@@ -17,8 +25,14 @@ const HeroContent = () => {
 					alt="traveller"
 					className="absolute top-0 left-0 -z-10 sm:static w-full h-full sm:w-auto sm:h-auto object-cover"
 				/>
-			</div>
-			<div className="w-full md:w-1/2 md:flex md:flex-col md:justify-center">
+			</motion.div>
+			<motion.div
+				variants={fadeIn('right', 0.2, 1)}
+				initial="offscreen"
+				whileInView={'onscreen'}
+				viewport={{ once: true, amount: 0.7 }}
+				className="w-full md:w-1/2 md:flex md:flex-col md:justify-center"
+			>
 				<p className="font-bold uppercase text-sm text-orange-pink mb-4 md:mb-2 lg:mb-4 font-poppins">
 					Best Destinations around the world
 				</p>
@@ -40,7 +54,7 @@ const HeroContent = () => {
 						<span className="font-poppins font-medium text-black-light">play demo</span>
 					</button>
 				</div>
-			</div>
+			</motion.div>
 		</div>
 	);
 };

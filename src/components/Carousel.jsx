@@ -2,6 +2,8 @@ import { useCallback } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import { testimoniesData } from '../data/data';
 import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io';
+import { motion } from 'framer-motion';
+import { fadeIn } from '../utils/variants';
 
 export const EmblaCarousel = () => {
 	const [emblaRef, emblaApi] = useEmblaCarousel();
@@ -16,7 +18,14 @@ export const EmblaCarousel = () => {
 
 	return (
 		<div className="embla max-w-2xl w-full mx-auto">
-			<div className="embla__viewport" ref={emblaRef}>
+			<motion.div
+				variants={fadeIn('up', 0.2, 2)}
+				initial="offscreen"
+				whileInView={'onscreen'}
+				viewport={{ once: true, amount: 0.7 }}
+				className="embla__viewport"
+				ref={emblaRef}
+			>
 				<div className="embla__container">
 					{testimoniesData.map((item, index) => (
 						<div className="embla__slide" key={index}>
@@ -41,13 +50,27 @@ export const EmblaCarousel = () => {
 						</div>
 					))}
 				</div>
-			</div>
-			<button className="embla__prev" onClick={scrollPrev}>
+			</motion.div>
+			<motion.button
+				variants={fadeIn('up', 0.2, 2)}
+				initial="offscreen"
+				whileInView={'onscreen'}
+				viewport={{ once: true, amount: 0.7 }}
+				className="embla__prev"
+				onClick={scrollPrev}
+			>
 				<IoIosArrowBack className="text-2xl" />
-			</button>
-			<button className="embla__next" onClick={scrollNext}>
+			</motion.button>
+			<motion.button
+				variants={fadeIn('up', 0.2, 2)}
+				initial="offscreen"
+				whileInView={'onscreen'}
+				viewport={{ once: true, amount: 0.7 }}
+				className="embla__next"
+				onClick={scrollNext}
+			>
 				<IoIosArrowForward className="text-2xl" />
-			</button>
+			</motion.button>
 		</div>
 	);
 };

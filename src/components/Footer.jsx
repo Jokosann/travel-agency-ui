@@ -4,7 +4,6 @@ import { FaInstagram, FaTwitter, FaApple } from 'react-icons/fa';
 import { BiLogoPlayStore } from 'react-icons/bi';
 
 const Footer = () => {
-	const { companyData, ContactData, moreData } = footerData;
 	return (
 		<footer className="w-full py-10 mt-24">
 			<div className="wrapper flex flex-col gap-14">
@@ -15,30 +14,16 @@ const Footer = () => {
 							Book your trip in minute, get full Control for much longer.
 						</p>
 					</div>
-					<div>
-						<h2 className="font-poppins font-bold mb-4 text-lg">Company</h2>
-						<ul className="text-black-light font-poppins text-base font-medium flex flex-col gap-1">
-							{companyData.map((item, index) => (
-								<li key={index}>{item}</li>
-							))}
-						</ul>
-					</div>
-					<div>
-						<h2 className="font-poppins font-bold mb-4 text-lg">Contact</h2>
-						<ul className="text-black-light font-poppins text-base font-medium flex flex-col gap-1">
-							{ContactData.map((item, index) => (
-								<li key={index}>{item}</li>
-							))}
-						</ul>
-					</div>
-					<div>
-						<h2 className="font-poppins font-bold mb-4 text-lg">More</h2>
-						<ul className="text-black-light font-poppins text-base font-medium flex flex-col gap-1">
-							{moreData.map((item, index) => (
-								<li key={index}>{item}</li>
-							))}
-						</ul>
-					</div>
+					{footerData.map((item, index) => (
+						<div key={index}>
+							<h2 className="font-poppins font-bold mb-4 text-lg">{item.name}</h2>
+							<ul className="text-black-light font-poppins text-base font-medium flex flex-col gap-1">
+								{item.items.map((list, index) => (
+									<li key={index}>{list}</li>
+								))}
+							</ul>
+						</div>
+					))}
 					<div>
 						<div className="flex gap-4 mb-4">
 							<div className="icon-footer">

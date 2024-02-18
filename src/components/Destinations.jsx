@@ -1,20 +1,40 @@
 import { dataDestinations } from '../data/data';
 import { svg } from '../utils/assets';
+import { motion } from 'framer-motion';
+import { fadeIn } from '../utils/variants';
 
 const Destinations = () => {
 	return (
 		<div className="flex flex-col">
 			<div className="w-full mb-14">
-				<p className="text-center font-poppins font-medium text-black-light mb-2">
+				<motion.p
+					variants={fadeIn('up', 0.2, 1)}
+					initial="offscreen"
+					whileInView={'onscreen'}
+					viewport={{ once: true, amount: 0.7 }}
+					className="text-center font-poppins font-medium text-black-light mb-2"
+				>
 					Top Selling
-				</p>
-				<h1 className="text-center font-volkhov text-4xl font-bold">Top Destinations</h1>
+				</motion.p>
+				<motion.h1
+					variants={fadeIn('up', 0.2, 1.5)}
+					initial="offscreen"
+					whileInView={'onscreen'}
+					viewport={{ once: true, amount: 0.7 }}
+					className="text-center font-volkhov text-4xl font-bold"
+				>
+					Top Destinations
+				</motion.h1>
 			</div>
 			<div className="max-w-4xl w-full mx-auto card__destinations">
-				{dataDestinations.map((item) => (
-					<div
+				{dataDestinations.map((item, index) => (
+					<motion.div
 						key={item.id}
-						className="aspect-[1/1.5] relative overflow-hidden shadow-lg rounded-2xl hover:scale-105 transition-all"
+						variants={fadeIn('up', 0.2, index + 1)}
+						initial="offscreen"
+						whileInView={'onscreen'}
+						viewport={{ once: true, amount: 0.7 }}
+						className="aspect-[1/1.5] relative overflow-hidden shadow-lg rounded-2xl"
 					>
 						<div className="w-full h-full overflow-hidden cursor-pointer">
 							<img src={item.img} alt={item.img} className="w-full object-cover" />
@@ -29,7 +49,7 @@ const Destinations = () => {
 								<p className="text-black-light font-medium text-sm">{item.trip}</p>
 							</div>
 						</div>
-					</div>
+					</motion.div>
 				))}
 			</div>
 		</div>
