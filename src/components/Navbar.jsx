@@ -66,7 +66,7 @@ const Navbar = () => {
 				<div
 					className={`navlist__menu ${
 						isMenu ? 'open' : ''
-					} fixed lg:relative top-0 right-0 z-50 translate-x-full lg:translate-x-0 w-64 lg:w-auto h-full lg:h-auto bg-light lg:bg-transparent flex flex-col lg:flex-row justify-start gap-14 xl:gap-16 py-20 lg:py-0 px-8 lg:px-0 shadow-lg lg:shadow-none`}
+					} fixed lg:relative top-0 right-0 z-50 translate-x-full lg:translate-x-0 w-64 lg:w-auto h-full lg:h-auto bg-light lg:bg-transparent flex flex-col lg:flex-row justify-start gap-10 xl:gap-16 py-20 lg:py-0 px-8 lg:px-0 shadow-lg lg:shadow-none`}
 				>
 					<div
 						onClick={() => {

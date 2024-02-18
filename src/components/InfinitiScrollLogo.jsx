@@ -6,7 +6,7 @@ const InfinitiScrollLogo = () => {
 			<div className="infiniti-scroll w-max flex items-center flex-nowrap gap-20 h-32">
 				{LogoData.map((item, index) => (
 					<div key={index}>
-						<img src={item} alt={item} />
+						<img src={item} alt={item} className="w-[7.5rem]" />
 					</div>
 				))}
 			</div>

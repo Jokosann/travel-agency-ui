@@ -8,6 +8,7 @@ import Booking from './components/Booking';
 import Testimonials from './components/Testimonials';
 import InfinitiScrollLogo from './components/InfinitiScrollLogo';
 import Subscribe from './components/Subscribe';
+import Footer from './components/Footer';
 
 function App() {
 	const [scrollPosition, setScrollPosition] = useState(0);
@@ -55,6 +56,7 @@ function App() {
 				<InfinitiScrollLogo />
 				<Subscribe />
 			</section>
+			<Footer />
 		</React.Fragment>
 	);
 }
